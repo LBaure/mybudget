@@ -68,28 +68,23 @@
             
             <v-list flat dense>
               <v-subheader>Resumen</v-subheader>
-              <!-- <v-list-item-group
-                v-model="selectedItem"
-              > -->
-                <template v-for="(item, index) in items">
-                  <v-list-item :key="index.text">
-                    <v-list-item-icon>
-                      <v-icon :color="item.color"  v-text="item.icon"></v-icon>
-                    </v-list-item-icon>
-                    <v-list-item-content>
-                      <v-list-item-title v-text="item.text"></v-list-item-title>
-                    </v-list-item-content>
-                    <v-list-item-action v-text="item.value"></v-list-item-action>
-                  </v-list-item>
-                  
-                  <v-divider
-                    v-if="index< items.length - 1"
-                    :key="index"
-                  ></v-divider>
-                </template>
-              <!-- </v-list-item-group> -->
+              <template v-for="(item, index) in items">
+                <v-list-item :key="index.text">
+                  <v-list-item-icon>
+                    <v-icon :color="item.color"  v-text="item.icon"></v-icon>
+                  </v-list-item-icon>
+                  <v-list-item-content>
+                    <v-list-item-title v-text="item.text"></v-list-item-title>
+                  </v-list-item-content>
+                  <v-list-item-action v-text="item.value"></v-list-item-action>
+                </v-list-item>
+                
+                <v-divider
+                  v-if="index< items.length - 1"
+                  :key="index"
+                ></v-divider>
+              </template>
             </v-list>
-
           </v-card-text>
         </v-card>
       </v-tab-item>
@@ -101,9 +96,7 @@ export default {
   data () {
     return {
       tabs: null,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       value: 90,
-      selectedItem: 1,
       items: [
         { text: 'Ingresos', icon: 'mdi-cash-multiple', value: 7000, color: 'success' },
         { text: 'Gastos', icon: 'mdi-currency-usd-off', value: 3000, color: 'error' },
