@@ -68,13 +68,13 @@
             
             <v-list flat dense>
               <v-subheader>Resumen</v-subheader>
-              <v-list-item-group
+              <!-- <v-list-item-group
                 v-model="selectedItem"
-              >
+              > -->
                 <template v-for="(item, index) in items">
-                  <v-list-item :key="index.text" :color="item.color" >
+                  <v-list-item :key="index.text">
                     <v-list-item-icon>
-                      <v-icon v-text="item.icon"></v-icon>
+                      <v-icon :color="item.color"  v-text="item.icon"></v-icon>
                     </v-list-item-icon>
                     <v-list-item-content>
                       <v-list-item-title v-text="item.text"></v-list-item-title>
@@ -87,7 +87,7 @@
                     :key="index"
                   ></v-divider>
                 </template>
-              </v-list-item-group>
+              <!-- </v-list-item-group> -->
             </v-list>
 
           </v-card-text>
@@ -105,7 +105,7 @@ export default {
       value: 90,
       selectedItem: 1,
       items: [
-        { text: 'Ingresos', icon: 'mdi-cash-multiple', value: 7000, color: 'secondary' },
+        { text: 'Ingresos', icon: 'mdi-cash-multiple', value: 7000, color: 'success' },
         { text: 'Gastos', icon: 'mdi-currency-usd-off', value: 3000, color: 'error' },
         { text: 'Saldo Disponible', icon: 'mdi-flag', value: 4000, color: 'info' },
       ],
