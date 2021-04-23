@@ -84,7 +84,7 @@
       </v-toolbar-title>      
     </v-app-bar>
     <v-main>
-      <v-container>
+      <v-container class="pa-0">
         <nuxt />
       </v-container>
     </v-main>
@@ -92,7 +92,7 @@
       :absolute="!fixed"
       app
     >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <span>&copy; {{ new Date().getFullYear() }} Software y Tecnología</span>
     </v-footer>
   </v-app>
 </template>
