@@ -47,7 +47,12 @@
         :key="i"
         :value="'mobile-tabs-5-' + i"
       >
-        <v-card 
+        <gastos-card
+          v-if="i === 1"
+        />
+        <ingresos-card v-if="i === 3" />
+        <v-card
+           v-if="i === 2" 
           flat
           min-height="500px"
         >
@@ -66,7 +71,10 @@
               </v-col>
             </v-row>            
             
-            <v-list flat dense>
+            <v-list
+              class="font-list" 
+              flat 
+            >
               <v-subheader>Resumen</v-subheader>
               <template v-for="(item, index) in items">
                 <v-list-item :key="index.text">
@@ -89,6 +97,19 @@
         </v-card>
       </v-tab-item>
     </v-tabs-items>
+    <v-fab-transition>
+      <v-btn        
+        class="v-btn--example"
+        color="success"
+        absolute
+        bottom
+        right
+        fab
+      >
+        <v-icon>mdi-plus</v-icon>
+      </v-btn>
+    </v-fab-transition>
+
   </div>
 </template>
 <script>
@@ -111,6 +132,17 @@ export default {
     max-width: 25% !important;
     min-width: 25% !important;
     widows: 25% !important;
-
+  }
+  .font-list .v-list-item__title {
+    font-size: 1.25rem !important;
+  }
+  
+  .font-list .v-list-item__action {
+    font-size: 1.25rem !important;
+  }
+  .v-btn--example {
+    bottom: 0;
+    position: absolute;
+    margin: 0 0 50px 16px;
   }
 </style>
