@@ -143,6 +143,6 @@ export default {
   .v-btn--example {
     bottom: 0;
     position: absolute;
-    margin: 0 0 50px 16px;
+    margin: 0 0 250px 16px;
   }
 </style>

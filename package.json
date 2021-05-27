@@ -11,7 +11,9 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "node-forge": "^0.10.0",
+    "nuxt": "^2.14.6",
+    "oracledb": "^5.1.0"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.2"
